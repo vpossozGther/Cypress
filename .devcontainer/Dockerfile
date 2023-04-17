@@ -1,4 +1,5 @@
-FROM mcr.microsoft.com/vscode/devcontainers/base:buster
+ARG VARIANT=3-bullseye
+FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 
 # https://docs.cypress.io/guides/continuous-integration/introduction#Dependencies
 RUN apt-get update && \
